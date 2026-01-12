@@ -1,0 +1,59 @@
+@use "../reset";
+@use "../var" as *;
+
+.customize-support {
+  padding-inline: 20px;
+  padding-block: 80px;
+  max-width: 600px;
+  margin-inline: auto;
+
+  .bookly-service-step {
+    // 1: サービス
+    .bookly-table {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @media screen and (max-width: 768px) {
+        gap: 0;
+      }
+
+      .bookly-table-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+  // 2: 日時
+  .bookly-details-step {
+    .bookly-table {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @media screen and (max-width: 768px) {
+        gap: 0;
+      }
+
+      .bookly-table-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+  // 共通
+  b {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: inline-block;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

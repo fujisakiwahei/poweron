@@ -1,0 +1,25 @@
+{
+  "name": "poweron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser": "browser-sync start --config bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fujisakiwahei/poweron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fujisakiwahei/poweron/issues"
+  },
+  "homepage": "https://github.com/fujisakiwahei/poweron#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  }
+}

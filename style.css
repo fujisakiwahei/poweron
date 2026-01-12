@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; /* box-sizingを追加すると便利です */
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----------------------------------- */
+/* --- フォーム要素のリセットCSS --- */
+/* ----------------------------------- */
+/* buttonとinput[type="button"]などにカーソルをポインターに */
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+
+/* iOSでの内側の影を削除 */
+input[type=text],
+input[type=email],
+input[type=search],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+}
+
+/* selectの矢印を非表示にする（基本的なリセット） */
+select::-ms-expand {
+  /* IE */
+  display: none;
+}
+
+/* textareaのリサイズを無効化（必要に応じて縦(vertical)や横(horizontal)に設定） */
+textarea {
+  resize: none;
+}
+
+* {
+  font-feature-settings: "palt";
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  color: #333;
+}
+
+main {
+  position: relative;
+}
+
+/* ===============================================
+     aタグ
+  =============================================== */
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ===============================================
+     セクション
+  =============================================== */
+/* ===============================================
+     セクションタイトル
+  =============================================== */
+/* ===============================================
+     ページタイトル
+  =============================================== */
+/* ===============================================
+       ボタン
+  =============================================== */
+/* ===============================================
+       改行
+  =============================================== */
+/* ===============================================
+   *  デバイスサイズに応じた表示切り替え
+  =============================================== */
+@media screen and (max-width: px) {
+  .pcOnly {
+    display: none;
+  }
+}
+
+@media screen and (min-width: px) {
+  .spOnly {
+    display: none;
+  }
+}
+
+/* ===============================================
+       グローバルナビゲーション
+  =============================================== */
+.customize-support {
+  padding-inline: 20px;
+  padding-block: 80px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.customize-support .bookly-service-step .bookly-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .customize-support .bookly-service-step .bookly-table {
+    gap: 0;
+  }
+}
+.customize-support .bookly-service-step .bookly-table .bookly-table-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.customize-support .bookly-details-step .bookly-table {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .customize-support .bookly-details-step .bookly-table {
+    gap: 0;
+  }
+}
+.customize-support .bookly-details-step .bookly-table .bookly-table-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.customize-support b {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .customize-support b {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */
