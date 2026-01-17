@@ -28,12 +28,20 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 // メディアクエリ
-$pcSmallBreakPoint: px;
-$tabletBreakPoint: px;
-$spBreakPoint: px;
+// $pcSmallBreakPoint: px;
+$tabletBreakPoint: 768px;
+$spBreakPoint: 480px;
 
 // カラー
 $colorWhite: #fff;
 $colorText: #333;
 $colorGrayLight: #f0f0f0;
 $colorGrayDark: #333;
+$colorGreen: #008236;
+$colorGreenPastel: #448568;
+$colorGreenPastelLight: #fbfff8;
+
+// フォント
+$serif: "Noto Serif JP", serif;
+$english: "Cormorant Garamond", serif;
+$handwriting: "Parisienne", cursive;

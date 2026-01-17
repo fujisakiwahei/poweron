@@ -1,17 +1,22 @@
 @use "./reset";
 @use "./var" as *;
 
+// スムーススクロール
+html {
+  scroll-behavior: smooth;
+}
+
 // フォント
 * {
   font-feature-settings: "palt";
 }
 
 body {
-  font-family: sans-serif;
+  font-family: $serif;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.05em;
-  line-height: 1.5;
+  line-height: 1.8;
   color: $colorText;
 }
 
@@ -25,15 +30,172 @@ main {
 a {
   cursor: pointer;
   text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 /* ===============================================
      セクション
   =============================================== */
 
+/*
+    CTAセクション
+  =============================================== */
+.reserve-cta {
+  width: 100%;
+  padding: 80px 20px;
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    padding: 40px 20px;
+  }
+
+  &__subtitle {
+    color: $colorGreenPastel;
+    text-align: center;
+    margin-bottom: 8px;
+
+    @media screen and (max-width: $tabletBreakPoint) {
+      margin-bottom: -8px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 600;
+    color: $colorText;
+    text-align: center;
+
+    @media screen and (max-width: $tabletBreakPoint) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__button-area {
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @media screen and (max-width: $tabletBreakPoint) {
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    background: $colorGreenPastel;
+
+    @media screen and (max-width: $tabletBreakPoint) {
+      gap: 8px;
+    }
+
+
+    &__text {
+      font-size: clamp(14px, 2.4vw, 24px);
+      font-weight: 600;
+      color: $colorWhite;
+      line-height: 1.4;
+    }
+
+    .material-symbols-outlined {
+      font-size: clamp(24px, 6vw, 64px);
+      color: $colorWhite;
+    }
+
+    &__tel_area {
+      width: 100%;
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      font-size: 16px;
+      color: $colorWhite;
+
+      @media screen and (max-width: $tabletBreakPoint) {
+        display: none;
+      }
+
+      .material-symbols-outlined {
+        font-size: 20px;
+        color: $colorWhite;
+      }
+
+      .reserve-cta__button__number {
+        font-size: 16px;
+        color: $colorWhite;
+        font-family: "noto-sans-jp", sans-serif;
+      }
+    }
+  }
+}
+
 /* ===============================================
      セクションタイトル
   =============================================== */
+.section-title {
+  position: relative;
+
+  &__japanese {
+    position: relative;
+    z-index: 1;
+    line-height: 1.4;
+    font-size: 32px;
+    font-weight: 600;
+    color: $colorText;
+  }
+
+  &__english {
+    width: 100%;
+    position: relative;
+    color: $colorGreenPastel;
+    opacity: 0.2;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-family: $handwriting;
+    font-size: 48px;
+    rotate: -5deg;
+    transform-origin: top left;
+
+    @media screen and (max-width: $spBreakPoint) {
+      top: -24px;
+      font-size:36px;
+    }
+  }
+}
+
+.section-title.center {
+  text-align: center;
+
+  .section-title__english {
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    rotate: 0deg;
+    transform-origin: center center;
+  }
+}
 
 /* ===============================================
      ページタイトル
@@ -42,6 +204,27 @@ a {
 /* ===============================================
        ボタン
   =============================================== */
+.button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: $colorGreenPastel;
+  padding: 12px 20px;
+  border-radius: 50vh;
+  font-size: 18px !important;
+  color: white !important;
+
+  .material-symbols-outlined {
+    transform: translateY(1px);
+  }
+}
+
+.button.white {
+  background: $colorWhite !important;
+  color: $colorGreen !important;
+  font-weight: 600 !important;
+}
 
 /* ===============================================
        改行
@@ -49,17 +232,31 @@ a {
 /* ===============================================
    *  デバイスサイズに応じた表示切り替え
   =============================================== */
-.pcOnly {
+.pc-only {
   @media screen and (max-width: $tabletBreakPoint) {
-    display: none;
+    display: none !important;
   }
 }
 
-.spOnly {
-  @media screen and (min-width: $tabletBreakPoint) {
-    display: none;
+.over-tablet-only {
+  @media screen and (max-width: calc($tabletBreakPoint)) {
+    display: none !important;
   }
 }
+
+.under-tablet-only {
+  @media screen and (min-width: calc($tabletBreakPoint + 1px)) {
+    display: none !important;
+  }
+}
+
+.sp-only {
+  @media screen and (min-width: calc($spBreakPoint + 1px)) {
+    display: none !important;
+  }
+}
+
+
 
 /* ===============================================
        グローバルナビゲーション

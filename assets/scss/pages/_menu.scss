@@ -1,2 +1,204 @@
 @use "../reset";
 @use "../var" as *;
+
+.menu-first-view {
+  margin-top: 88px;
+  width: 100%;
+  aspect-ratio: 3/1;
+  background-image: image-set(
+    url('assets/images/menu/menu-fv-bg.webp') 1x,
+    url('assets/images/menu/menu-fv-bg@2x.webp') 2x
+  );
+  /* Safari対応のベンダープレフィックス付き */
+  background-image: -webkit-image-set(
+    url('assets/images/menu/menu-fv-bg.webp') 1x,
+    url('assets/images/menu/menu-fv-bg@2x.webp') 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: clamp(32px, 8vw, 48px);
+    letter-spacing: 0.1em;
+    line-height: 1;
+    color: white;
+    font-family: $english;
+  }
+
+  &__separator {
+    width: 120px;
+    margin-block: 12px;
+    height: 1px;
+    background: white;
+  }
+
+  &__subtitle {
+      line-height: 1;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+.menu-shops {
+  margin-top: 80px;
+  padding-inline: 20px;
+
+  &__inner {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__text {
+        .menu-shops__item__title{
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .menu-shops__item__details__container{
+            margin-top: 4px;
+            display: flex;
+            gap: 8px;
+            font-size: 18px;
+
+            &:last-child{
+                margin-top: 12px;
+            }
+
+            .material-symbols-outlined{
+                font-size: 24px;
+                font-weight: 500;
+                color: $colorGreenPastel;
+                transform: translateY(4px);
+            }
+
+            span{
+                font-size: 16px;
+                font-weight: 600;
+                color: $colorGreenPastel;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        border-radius: 12px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .button {
+        margin-top: 12px;
+    }
+  }
+}
+
+.menu {
+  margin-top: 80px;
+  padding-block: 80px;
+  padding-inline: 20px;
+  background: $colorGreenPastelLight;
+
+  &__inner {
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+
+    .every-shop-menu {
+        padding-top: 40px;
+
+        &:last-child{
+            padding-top: 120px;
+        }
+
+        .menu__category {
+            margin-top: 80px;
+
+            &__title {
+                font-size: 24px;
+                font-weight: 600;
+                color: $colorGreenPastel;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                &::before {
+                  width: 4px;
+                    content: "";
+                    display: block;
+                    background: $colorGreenPastel;
+                    height: 28px;
+                    line-height: 1;
+                }
+            }
+
+            &__items {
+                margin-top: 24px;
+            }
+
+            .menu__item {
+                margin-top: 28px;
+                gap: 12px;
+
+                &__top {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 24px;
+
+                    .menu__item__title {
+                      flex-shrink: 0;
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                    .dotted-line {
+                      width: 100%;
+                      height: 2px;
+                      background-image : linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0) 2px, transparent 2px, transparent 5px); 
+                      background-size: 16px 2px;
+                      background-position: bottom;
+                      background-repeat: repeat-x;
+                      opacity: 0.3;
+                    }
+                    .menu__item__price {
+                        flex-shrink: 0;
+                        font-size: 28px;
+                        span{
+                            font-size: 18px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .menu__item__description {
+                    margin-right: 200px;
+                    font-weight: 600;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+  }
+}
