@@ -1,8 +1,14 @@
 <?php get_header(); ?>
 
 <section class="first-view">
+    <img
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/front/first-view.webp"
+        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/first-view.webp 1x,<?php echo get_template_directory_uri(); ?>/assets/images/front/first-view@2x.webp 2x"
+        alt="西新でリフレッシュするならパワーオン"
+        class="first-view__bg"
+        fetchpriority="high">
     <div class="first-view__inner">
-        <h1 class="first-view__title">西新でマッサージなら<br>パワーオン</h1>
+        <h1 class="first-view__title">西新でリフレッシュするなら<br>パワーオン</h1>
     </div>
 </section>
 
