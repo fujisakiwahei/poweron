@@ -18,6 +18,10 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  @media screen and (max-width: $tabletBreakPoint) {
+    aspect-ratio: 2/1;
+  }
+
   &__inner {
     height: 100%;
     width: 100%;
@@ -53,6 +57,10 @@
   margin-top: 80px;
   padding-inline: 20px;
 
+  @media screen and (max-width: $tabletBreakPoint) {
+    margin-top: 40px;
+  }
+
   &__inner {
     width: 100%;
     max-width: 800px;
@@ -60,6 +68,11 @@
     display: flex;
     justify-content: center;
     gap: 40px;
+
+    @media screen and (max-width: $tabletBreakPoint) {
+      flex-direction: column;
+      gap: 80px;
+    }
   }
 
   &__item {
@@ -122,10 +135,18 @@
   padding-inline: 20px;
   background: $colorGreenPastelLight;
 
+  @media screen and (max-width: $tabletBreakPoint) {
+    padding-block: 40px;
+  }
+
   &__inner {
     width: 100%;
     max-width: 960px;
     margin-inline: auto;
+
+    @media screen and (max-width: $tabletBreakPoint) {
+      max-width: 100%;
+    }
 
     .every-shop-menu {
         padding-top: 40px;
@@ -145,6 +166,10 @@
                 align-items: center;
                 gap: 8px;
 
+                @media screen and (max-width: $tabletBreakPoint) {
+                  font-size: 20px;
+                }
+
                 &::before {
                   width: 4px;
                     content: "";
@@ -157,22 +182,37 @@
 
             &__items {
                 margin-top: 24px;
+
+                @media screen and (max-width: $tabletBreakPoint) {
+                  margin-top: 12px;
+                }
             }
 
             .menu__item {
-                margin-top: 28px;
+              margin-top: 28px;
                 gap: 12px;
 
                 &__top {
+                  width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     gap: 24px;
 
+                    @media screen and (max-width: $tabletBreakPoint) {
+                      gap: 8px;
+                      flex-direction: column;
+                      align-items: start;
+                    }
+
                     .menu__item__title {
                       flex-shrink: 0;
                         font-size: 22px;
                         font-weight: 600;
+                        @media screen and (max-width: $tabletBreakPoint) {
+                          flex-shrink: 1;
+                          font-size: 18px;
+                        }
                     }
                     .dotted-line {
                       width: 100%;
@@ -182,20 +222,34 @@
                       background-position: bottom;
                       background-repeat: repeat-x;
                       opacity: 0.3;
-                    }
-                    .menu__item__price {
-                        flex-shrink: 0;
-                        font-size: 28px;
-                        span{
-                            font-size: 18px;
-                            font-weight: 600;
-                        }
+
+                      @media screen and (max-width: $tabletBreakPoint) {
+                        display: none;
+                      }
                     }
                 }
                 .menu__item__description {
                     margin-right: 200px;
                     font-weight: 600;
                     opacity: 0.5;
+
+                    @media screen and (max-width: $tabletBreakPoint) {
+                      margin-right: 0;
+                      font-size: 14px;
+                    }
+                }
+                .menu__item__price {
+                    flex-shrink: 0;
+                    font-size: 28px;
+
+                    @media screen and (max-width: $tabletBreakPoint) {
+                      color: $colorGreenPastel;
+                    }
+
+                    span{
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
                 }
             }
         }

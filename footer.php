@@ -15,6 +15,10 @@
                     <span class="material-symbols-outlined">phone</span>
                     <p>092-707-5788</p>
                 </a>
+                <a class="button white" href="<?php echo esc_url(home_url()); ?>/reserve/">
+                    <span class="material-symbols-outlined">calendar_clock</span>
+                    <span class="button__text">ご予約はこちら</span>
+                </a>
             </div>
             <div class="footer__access__separator"></div>
             <div class="footer__access__item">
@@ -24,12 +28,12 @@
                     <span class="material-symbols-outlined">phone</span>
                     <p>092-407-4776</p>
                 </a>
+                <a class="button white" href="https://beauty.hotpepper.jp/kr/slnH000384472/" target="_blank">
+                    <span class="material-symbols-outlined">calendar_clock</span>
+                    <span class="button__text">ご予約はこちら</span>
+                </a>
             </div>
         </div>
-        <a class="button white" href="<?php echo esc_url(home_url()); ?>/reserve/">
-            <span class="material-symbols-outlined">calendar_clock</span>
-            <span class="button__text">ご予約はこちら</span>
-        </a>
         <small class="footer__copyright">Copyright © 2026 <br class="sp-only">Power On. All rights reserved.</small>
     </div>
 </footer>

@@ -19,7 +19,7 @@ footer {
       height: 96px;
 
       @media screen and (max-width: $spBreakPoint) {
-        height: 64px;
+        height: 80px;
       }
 
       a {
@@ -43,7 +43,6 @@ footer {
 
       @media screen and (max-width: $tabletBreakPoint) {
         flex-direction: column;
-        gap: 20px;
       }
 
       .footer__access__separator {
@@ -82,7 +81,7 @@ footer {
     }
 
     .button {
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     .footer__copyright {

@@ -22,7 +22,7 @@
                     <li class="pc-only"><a href="<?php echo esc_url(home_url()); ?>/#access">アクセス</a></li>
                     <li><a href="<?php echo esc_url(home_url()); ?>/menu/">メニュー</a></li>
                     <li>
-                        <a class="button" href="<?php echo esc_url(home_url()); ?>/reserve/">
+                        <a id="header-reserve-btn" class="button" href="<?php echo esc_url(home_url()); ?>/reserve/">
                             <span class="material-symbols-outlined">calendar_clock</span>
                             <span class="button__text">予約</span>
                         </a>

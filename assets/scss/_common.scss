@@ -57,11 +57,7 @@ a {
   &__subtitle {
     color: $colorGreenPastel;
     text-align: center;
-    margin-bottom: 8px;
-
-    @media screen and (max-width: $tabletBreakPoint) {
-      margin-bottom: -8px;
-    }
+    margin-bottom: -8px;
   }
 
   &__title {
@@ -78,10 +74,11 @@ a {
 
   &__button-area {
     width: 100%;
-    max-width: 960px;
+    max-width: 600px;
     margin-inline: auto;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 40px;
 
     @media screen and (max-width: $tabletBreakPoint) {
@@ -91,7 +88,7 @@ a {
 
   &__button {
     position: relative;
-    width: 100%;
+    width: calc(50% - 20px);
     height: auto;
     aspect-ratio: 1/1;
     border-radius: 12px;
@@ -105,8 +102,8 @@ a {
 
     @media screen and (max-width: $tabletBreakPoint) {
       gap: 8px;
+      width: calc(50% - 10px);
     }
-
 
     &__text {
       font-size: clamp(14px, 2.4vw, 24px);
@@ -180,7 +177,7 @@ a {
 
     @media screen and (max-width: $spBreakPoint) {
       top: -24px;
-      font-size:36px;
+      font-size: 36px;
     }
   }
 }
@@ -255,8 +252,6 @@ a {
     display: none !important;
   }
 }
-
-
 
 /* ===============================================
        グローバルナビゲーション

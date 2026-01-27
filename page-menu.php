@@ -125,9 +125,10 @@
                                     <div class="menu__item__top">
                                         <h4 class="menu__item__title"><?php echo esc_html($menu_item['menu-title']); ?></h4>
                                         <div class="dotted-line"></div>
-                                        <div class="menu__item__price"><?php echo esc_html(number_format($menu_item['menu-price'])); ?><span>&nbsp;円</span></div>
+                                        <div class="menu__item__price over-tablet-only"><?php echo esc_html(number_format($menu_item['menu-price'])); ?><span>&nbsp;円</span></div>
                                     </div>
                                     <div class="menu__item__description"><?php echo esc_html($menu_item['menu-description']); ?></div>
+                                    <div class="menu__item__price sp-only"><?php echo esc_html(number_format($menu_item['menu-price'])); ?><span>&nbsp;円</span></div>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -192,9 +193,10 @@
                                     <div class="menu__item__top">
                                         <h4 class="menu__item__title"><?php echo esc_html($menu_item['menu-title']); ?></h4>
                                         <div class="dotted-line"></div>
-                                        <div class="menu__item__price"><?php echo esc_html(number_format($menu_item['menu-price'])); ?><span>&nbsp;円</span></div>
+                                        <div class="menu__item__price over-tablet-only"><?php echo esc_html(number_format($menu_item['menu-price'])); ?><span>&nbsp;円</span></div>
                                     </div>
                                     <div class="menu__item__description"><?php echo esc_html($menu_item['menu-description']); ?></div>
+                                    <div class="menu__item__price sp-only"><?php echo esc_html(number_format($menu_item['menu-price'])); ?><span>&nbsp;円</span></div>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -207,7 +209,7 @@
     </div>
 </section>
 
-<?php generate_reserve_cta(); ?>
+<?php generate_reserve_cta(true); ?>
 
 
 <?php get_footer(); ?>

@@ -6,7 +6,7 @@
     </div>
 </section>
 
-<?php generate_reserve_cta(); ?>
+<?php generate_reserve_cta(true); ?>
 
 <section class="introduction">
     <figure class="introduction__bg">
@@ -31,7 +31,11 @@
             </p>
             <a class="button" href="<?php echo esc_url(home_url()); ?>/reserve/">
                 <span class="material-symbols-outlined">calendar_clock</span>
-                <span class="button__text">ご予約はこちら</span>
+                <span class="button__text">本店のご予約はこちら</span>
+            </a>
+            <a class="button" href="https://beauty.hotpepper.jp/kr/slnH000384472/" target="_blank">
+                <span class="material-symbols-outlined">calendar_clock</span>
+                <span class="button__text">新店のご予約はこちら</span>
             </a>
         </div>
         <p class="introduction__image-area">
@@ -190,7 +194,7 @@
                                     <h4 class="therapist__details-title">趣味</h4>
                                     <p class="therapist__details-content"><?php echo $therapist_hobby; ?></p>
                                 <?php endif; ?> -->
-                                <a class="button" href="<?php echo esc_url(home_url()); ?>/reserve/">
+                                <a class="button" href="https://beauty.hotpepper.jp/kr/slnH000384472/" target="_blank">
                                     <span class="material-symbols-outlined">calendar_clock</span>
                                     <span class="button__text">ご予約はこちら</span>
                                 </a>
